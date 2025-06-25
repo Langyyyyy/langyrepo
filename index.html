@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Insert web page title here</title>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="generator" content="thesitewizard.com's Layout Wizard 4.0.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="all" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="tswnavbar.css">
+  </head>
+  <body class="theme-default">
+    <div id="timer">🔥 Time: 0s</div>
+    <div id="tswcontainer">
+      <div id="tswheader">
+        <!-- start of header section: insert your logo, etc, here -->
+        <p> </p>
+        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 147px; height: 147px;"
+
+            id="logo"></p>
+        <!-- end of header section: insert your logo, etc, above this line --> </div>
+      <div id="tswcontent">
+        <div id="tswcontproper" style="color: #121387; background-color: #baf2a9;">
+          <!-- start of content column: insert your content here -->
+          <h1 id="header"><strong>Home</strong></h1>
+          <strong> </strong>
+          <p> <strong><span style="font-family: Times New Roman;">Hi, I'm
+                Hanwen, I go to AB (Acton, MA), 10th grader in this September
+                (2025)<br>
+              </span></strong></p>
+          <span style="font-family: Times New Roman;"></span>
+          <p><strong><span style="font-family: Times New Roman;">This is my
+                website, click the tabs on the sidebar to continue<br>
+              </span></strong></p>
+          <p><strong><span style="font-family: Times New Roman;"> <img src="images/abrhs.jpg"
+
+                  alt="ABRHS" style="width: 166px; height: 166px;" id="ab"></span></strong><br>
+            <strong><span style="font-family: Times New Roman;"></span></strong></p>
+          <strong><span style="font-family: Times New Roman;"> </span></strong><span
+
+            style="font-family: Times New Roman;"></span><!-- end of content column: put your content above this line -->
+        </div>
+      </div>
+      <div id="tswsidecol">
+        <div id="tswsideproper">
+          <!-- start of side column: insert your navigation menu, etc, here -->
+          <p></p>
+          <div style="margin-bottom: 20px;"> <label for="themeSelect" style="font-weight: bold;">🎨
+              Theme:</label>
+            <select id="themeSelect" onchange="changeTheme(this.value)" style="width: 100%; margin-top: 5px;">
+              <option value="default">Default</option>
+              <option value="redgreen">Red-Green</option>
+              <option value="purpleyellow">Purple-Yellow</option>
+              <option value="blueorange">Blue-Orange</option>
+            </select>
+          </div>
+          <script>
+  function changeTheme(theme) {
+    document.body.classList.remove(
+      'theme-default', 'theme-redgreen', 'theme-purpleyellow', 'theme-blueorange'
+    );
+    document.body.classList.add(`theme-${theme}`);
+    localStorage.setItem('colorTheme', theme);
+  }
+
+  // On page load, apply saved theme
+  const savedTheme = localStorage.getItem('colorTheme') || 'default';
+  document.body.classList.add(`theme-${savedTheme}`);
+  document.getElementById('themeSelect').value = savedTheme;
+</script> <div id="tswcssbuttons">
+            <ul>
+              <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
+
+                    style="background-color: #8fb3a3 !important;">Home</a></span></li>
+              <span style="font-family: Rockwell;"> </span>
+              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back">About
+                    me</a></span></li>
+              <span style="font-family: Rockwell;"> </span>
+              <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
+
+                    style="background-color: #b998b8 !important;">Projects</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
+
+                    style="background-color: #b98982 !important;">More</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
+
+                    id="bach" style="background-color: #b98982 !important;">Secret
+                    Sauce</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
+
+                    style="background-color: #b98982 !important;">Wordle</a></span></li>
+            </ul>
+          </div>
+          <p></p>
+          <!-- end of side column: put your navigation menu, etc, above this line -->
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+      <div id="tswfooter">
+        <!-- start of footer section: insert your copyright notice, etc, here -->
+        <p><span style="font-family: Lucida Calligraphy;"> Project for WPI
+            Launch CS 2025 - made by Hanwen Tang<br>
+          </span></p>
+        <!-- end of footer section: insert your copyright notice, etc, above this line -->
+      </div>
+    </div>
+    <script>
+  let seconds = 0;
+  const timerEl = document.getElementById("timer");
+  setInterval(() => {
+    seconds++;
+    timerEl.textContent = `🔥 Time: ${seconds}s`;
+  }, 1000);
+</script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
