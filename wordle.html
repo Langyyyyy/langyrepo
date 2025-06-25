@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Insert web page title here</title>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="generator" content="thesitewizard.com's Layout Wizard 4.0.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="all" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="tswnavbar.css">
+    <style>
+      .board {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5px;
+      }
+
+      .tile {
+        width: 60px;
+        height: 60px;
+        border: 2px solid #555;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        background: #1a1a1a;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .correct {
+        background: #538d4e;
+      }
+
+      .present {
+        background: #b59f3b;
+      }
+
+      .absent {
+        background: #3a3a3c;
+      }
+
+      #guessInput {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+      }
+
+      #wordleContainer {
+        text-align: center;
+        color: #121387;
+        background-color: #baf2a9;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+
+      #playAgainBtn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #538d4e;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none;
+      }
+
+      #playAgainBtn:hover {
+        background-color: #40793a;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tswcontainer">
+      <div id="tswheader">
+        <p></p>
+        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 209px; height: 209px;"
+
+            id="logo"></p>
+      </div>
+      <div id="tswcontent">
+        <div style="color: #121387; background-color: #baf2a9;" id="wor">
+          <h1 id="header"><strong>Wordle</strong></h1>
+          <p>Word list courtesy of <a href="https://gist.github.com/kcwhite/bb598f1b3017b5477cb818c9b086a5d9"
+
+              target="_blank" rel="noopener noreferrer">kcwhite’s public word
+              list</a> — thank you!</p>
+          <div id="wordleContainer">
+            <div class="board" id="board"></div>
+            <input id="guessInput" maxlength="5" placeholder="Type 5-letter word"
+
+              autofocus="" type="text"> <button id="playAgainBtn">Play Again</button>
+          </div>
+          <script>
+            let WORD_LIST = [];
+            let WORD = '';
+            const board = document.getElementById('board');
+            const input = document.getElementById('guessInput');
+            const playAgainBtn = document.getElementById('playAgainBtn');
+            let currentRow = 0;
+
+            function chooseNewWord() {
+              const candidates = WORD_LIST.filter(w => w.length === 5);
+              WORD = candidates[Math.floor(Math.random() * candidates.length)];
+            }
+
+            function clearBoard() {
+              board.innerHTML = '';
+              for (let i = 0; i < 6; i++) {
+                const row = document.createElement('div');
+                row.className = 'row';
+                for (let j = 0; j < 5; j++) {
+                  const tile = document.createElement('div');
+                  tile.className = 'tile';
+                  row.appendChild(tile);
+                }
+                board.appendChild(row);
+              }
+            }
+
+            function resetGame() {
+              chooseNewWord();
+              clearBoard();
+              input.value = '';
+              input.disabled = false;
+              currentRow = 0;
+              playAgainBtn.style.display = 'none';
+              console.log("Secret word:", WORD); // for debugging
+            }
+
+            input.addEventListener('keyup', (e) => {
+              if (e.key === 'Enter') {
+                const guess = input.value.trim().toLowerCase();
+                if (guess.length !== 5 || currentRow >= 6) return;
+
+                if (!WORD_LIST.includes(guess)) {
+                  alert("❌ Not a valid word!");
+                  return;
+                }
+
+                const row = board.children[currentRow];
+                for (let i = 0; i < 5; i++) {
+                  const tile = row.children[i];
+                  tile.textContent = guess[i];
+
+                  if (guess[i] === WORD[i]) {
+                    tile.classList.add('correct');
+                  } else if (WORD.includes(guess[i])) {
+                    tile.classList.add('present');
+                  } else {
+                    tile.classList.add('absent');
+                  }
+                }
+
+                if (guess === WORD) {
+                  setTimeout(() => alert("🎉 You got it!"), 100);
+                  input.disabled = true;
+                  playAgainBtn.style.display = 'inline-block';
+                } else if (currentRow === 5) {
+                  setTimeout(() => alert(`❌ Out of tries! Word was "${WORD}"`), 100);
+                  input.disabled = true;
+                  playAgainBtn.style.display = 'inline-block';
+                }
+
+                currentRow++;
+                input.value = '';
+              }
+            });
+
+            playAgainBtn.addEventListener('click', resetGame);
+
+            fetch('valid-wordle-words.txt')
+              .then(res => res.text())
+              .then(data => {
+                WORD_LIST = data.split('\n').map(w => w.trim().toLowerCase()).filter(w => w.length === 5);
+                resetGame();
+              })
+              .catch(err => {
+                alert("⚠️ Could not load word list.");
+                console.error(err);
+              });
+          </script> </div>
+      </div>
+      <div id="tswsidecol">
+        <div id="tswsideproper">
+          <p></p>
+          <div id="tswcssbuttons">
+            <ul>
+              <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
+
+                    style="background-color: #cf9dd0 !important;">Home</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back"
+
+                    style="background-color: #ccffff !important;">About me</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
+
+                    style="background-color: #ff6666 !important;">Projects</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
+
+                    style="background-color: #c8ffd2 !important;">More</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
+
+                    id="bach" style="background-color: #b98982 !important;">Secret
+                    Sauce</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
+
+                    style="background-color: #b98982 !important;">Wordle</a></span></li>
+            </ul>
+          </div>
+          <p></p>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+      <div id="tswfooter">
+        <p><span style="font-family: Lucida Calligraphy;"> Project for WPI
+            Launch CS 2025 </span></p>
+      </div>
+    </div>
+  </body>
+</html>
