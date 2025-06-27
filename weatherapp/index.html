@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Weather Assistant</title>
+  <link rel="stylesheet" href="weather.css">
+  <script type="module">
+    // Make the Google AI SDK available globally after it's loaded.
+    // In a production app with a build system, you would import this directly in your JS files.
+    import {
+      GoogleGenerativeAI,
+      HarmCategory,
+      HarmBlockThreshold,
+    } from "https://esm.run/@google/generative-ai";
+    window.google = {
+      generativeai: {
+        GoogleGenerativeAI,
+        HarmCategory,
+        HarmBlockThreshold,
+      },
+    };
+  </script>
+</head>
+<body>
+  <main id="app-container">
+    <h1>🤖 Smart Weather Assistant</h1>
+    <p class="subtitle">Your intelligent assistant for any weather query. Ask "What's the forecast for Paris?" or "humidity in Tokyo".</p>
+
+    <!-- Weather Chatbot Section -->
+    <section id="chatbot-section">
+      <div id="api-key-section">
+        <p>Please enter your Google Gemini API key to begin.</p>
+        <div class="api-key-input-group">
+          <input id="api-key-input" type="password" placeholder="Enter your Gemini API key">
+          <button id="toggle-api-key" title="Show/Hide API Key">👁️</button>
+        </div>
+        <button id="connect-btn">Connect Chatbot</button>
+      </div>
+
+      <div id="chat-container" class="hidden">
+        <div id="chat-messages"></div>
+        <div id="chat-input-container">
+          <input id="chat-input" type="text" placeholder="Ask me about the weather..." disabled>
+          <button id="send-btn" disabled>Send</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forecast Graph Section (initially hidden) -->
+    <section id="forecast-container" class="hidden">
+      <h2 id="forecast-location-title"></h2>
+      <h3>Temperature Trend</h3>
+      <canvas id="forecast-chart"></canvas>
+      <h3 class="table-title">7-Day Outlook</h3>
+      <table id="forecast-table"></table>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./OMGeocode.js"></script>
+  <script src="./OMForecast.js"></script>
+  <script src="./OMWeather.js"></script>
+  <script src="./OMPollution.js"></script>
+  <script src="./WeatherChatbot.js"></script>
+  <script src="./display.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

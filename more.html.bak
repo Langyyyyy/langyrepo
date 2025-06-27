@@ -15,31 +15,22 @@
       <div id="tswheader">
         <!-- start of header section: insert your logo, etc, here -->
         <p> </p>
-        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 147px; height: 147px;"
+        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 209px; height: 209px;"
 
             id="logo"></p>
         <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
         <div id="tswcontproper" style="color: #121387; background-color: #baf2a9;">
           <!-- start of content column: insert your content here -->
-          <h1 id="header"><strong>Home</strong></h1>
-          <strong> </strong>
-          <p> <strong><span style="font-family: Times New Roman;">Hi, I'm
-                Hanwen, I go to AB (Acton, MA), 10th grader in this September
-                (2025)<br>
-              </span></strong></p>
-          <span style="font-family: Times New Roman;"></span>
-          <p><strong><span style="font-family: Times New Roman;">This is my
-                website, click the tabs on the sidebar to continue<br>
-              </span></strong></p>
-          <p><strong><span style="font-family: Times New Roman;"> <img src="images/abrhs.jpg"
+          <h1 id="header"><strong>More</strong></h1>
+          <strong></strong><strong><span style="font-family: Times New Roman;">email
+              - htang6@wpi.edu</span></strong></div>
+        <div style="color: #121387; background-color: #baf2a9;"><strong><span style="font-family: Times New Roman;">&nbsp;github
+              - </span></strong><strong><span style="font-family: Times New Roman;"><a
 
-                  alt="ABRHS" style="width: 166px; height: 166px;" id="ab"></span></strong><br>
-            <strong><span style="font-family: Times New Roman;"></span></strong></p>
-          <strong><span style="font-family: Times New Roman;"> </span></strong><span
-
-            style="font-family: Times New Roman;"></span><!-- end of content column: put your content above this line -->
-        </div>
+                href="https://github.com/Langyyyyy">Langyyyyy (HanwenT2010)</a></span></strong></div>
+        <div style="color: #121387; background-color: #baf2a9;"><br>
+          <!-- end of content column: put your content above this line --> </div>
       </div>
       <div id="tswsidecol">
         <div id="tswsideproper">
@@ -71,25 +62,25 @@
             <ul>
               <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
 
-                    style="background-color: #8fb3a3 !important;">Home</a></span></li>
+                    style="background-color: #cf9dd0 !important;">Home</a></span></li>
               <span style="font-family: Rockwell;"> </span>
-              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back">About
-                    me</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back"
+
+                    style="background-color: #ccffff !important;">About me</a></span></li>
               <span style="font-family: Rockwell;"> </span>
               <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
 
-                    style="background-color: #b998b8 !important;">Projects</a></span></li>
+                    style="background-color: #ff6666 !important;">Projects</a></span></li>
               <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
 
-                    style="background-color: #b98982 !important;">More</a></span></li>
+                    style="background-color: #c8ffd2 !important;">More</a></span></li>
               <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
 
                     id="bach" style="background-color: #b98982 !important;">Secret
                     Sauce</a></span></li>
               <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
+
                     style="background-color: #b98982 !important;">Wordle</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="wordfold/game.html"
-                    id="bach" style="background-color: #b98982 !important;">Word Fold</a></span></li>
             </ul>
           </div>
           <p></p>
@@ -100,8 +91,7 @@
       <div id="tswfooter">
         <!-- start of footer section: insert your copyright notice, etc, here -->
         <p><span style="font-family: Lucida Calligraphy;"> Project for WPI
-            Launch CS 2025 - made by Hanwen Tang<br>
-          </span></p>
+            Launch CS 2025 </span></p>
         <!-- end of footer section: insert your copyright notice, etc, above this line -->
       </div>
     </div>

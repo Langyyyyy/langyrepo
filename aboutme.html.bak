@@ -15,38 +15,46 @@
       <div id="tswheader">
         <!-- start of header section: insert your logo, etc, here -->
         <p> </p>
-        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 147px; height: 147px;"
+        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 209px; height: 209px;"
 
             id="logo"></p>
         <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
-        <div id="tswcontproper" style="color: #121387; background-color: #baf2a9;">
+        <div style="color: #121387; background-color: #baf2a9;" id="wor">
           <!-- start of content column: insert your content here -->
-          <h1 id="header"><strong>Home</strong></h1>
+          <h1 id="header"><strong>About Me<br>
+            </strong></h1>
           <strong> </strong>
-          <p> <strong><span style="font-family: Times New Roman;">Hi, I'm
-                Hanwen, I go to AB (Acton, MA), 10th grader in this September
-                (2025)<br>
+          <p> <strong><span style="font-family: Times New Roman;">I am 15 y/o</span></strong></p>
+          <strong><span style="font-family: Times New Roman;">I enjoy
+              basketball, soccer,</span></strong><strong><span style="font-family: Times New Roman;">
+              flute, debate, martial arts, designing, and science olympiad</span></strong>
+          <p><strong><span style="font-family: Times New Roman;">I also do some
+                narrative writing and woodworking<br>
               </span></strong></p>
-          <span style="font-family: Times New Roman;"></span>
-          <p><strong><span style="font-family: Times New Roman;">This is my
-                website, click the tabs on the sidebar to continue<br>
-              </span></strong></p>
-          <p><strong><span style="font-family: Times New Roman;"> <img src="images/abrhs.jpg"
+          <p><strong><span style="font-family: Times New Roman;">Favorite
+                Premier League team Tottenham !!</span></strong></p>
+          <p><br>
+            <img src="images/fluteee.jpg" alt="fluteeeeee" style="width: 204px; height: 152px;"
 
-                  alt="ABRHS" style="width: 166px; height: 166px;" id="ab"></span></strong><br>
-            <strong><span style="font-family: Times New Roman;"></span></strong></p>
-          <strong><span style="font-family: Times New Roman;"> </span></strong><span
+              id="tkd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="images/spurs.png" alt="Spurs Logo" style="width: 151px; height: 151px;"
 
-            style="font-family: Times New Roman;"></span><!-- end of content column: put your content above this line -->
-        </div>
+              id="spurs"></p>
+          <p><img src="images/TKD.png" alt="t" style="width: 229px; height: 152px;"
+
+              id="td"> </p>
+          <p style="color: #061387;">&nbsp;</p>
+          <!-- end of content column: put your content above this line --> </div>
       </div>
       <div id="tswsidecol">
         <div id="tswsideproper">
           <!-- start of side column: insert your navigation menu, etc, here -->
           <p></p>
           <div style="margin-bottom: 20px;"> <label for="themeSelect" style="font-weight: bold;">🎨
-              Theme:</label>
+              Theme:</label> 
             <select id="themeSelect" onchange="changeTheme(this.value)" style="width: 100%; margin-top: 5px;">
               <option value="default">Default</option>
               <option value="redgreen">Red-Green</option>
@@ -71,25 +79,25 @@
             <ul>
               <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
 
-                    style="background-color: #8fb3a3 !important;">Home</a></span></li>
+                    style="background-color: #cf9dd0 !important;">Home</a></span></li>
               <span style="font-family: Rockwell;"> </span>
-              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back">About
-                    me</a></span></li>
+              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back"
+
+                    style="background-color: #ccffff !important;">About me</a></span></li>
               <span style="font-family: Rockwell;"> </span>
               <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
 
-                    style="background-color: #b998b8 !important;">Projects</a></span></li>
+                    style="background-color: #ff6666 !important;">Projects</a></span></li>
               <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
 
-                    style="background-color: #b98982 !important;">More</a></span></li>
+                    style="background-color: #c8ffd2 !important;">More</a></span></li>
               <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
 
                     id="bach" style="background-color: #b98982 !important;">Secret
                     Sauce</a></span></li>
               <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
+
                     style="background-color: #b98982 !important;">Wordle</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="wordfold/game.html"
-                    id="bach" style="background-color: #b98982 !important;">Word Fold</a></span></li>
             </ul>
           </div>
           <p></p>
@@ -100,8 +108,7 @@
       <div id="tswfooter">
         <!-- start of footer section: insert your copyright notice, etc, here -->
         <p><span style="font-family: Lucida Calligraphy;"> Project for WPI
-            Launch CS 2025 - made by Hanwen Tang<br>
-          </span></p>
+            Launch CS 2025 </span></p>
         <!-- end of footer section: insert your copyright notice, etc, above this line -->
       </div>
     </div>
