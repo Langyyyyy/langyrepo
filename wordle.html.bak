@@ -252,7 +252,8 @@
       <div style="clear: both;"></div>
       <div id="tswfooter">
         <p><span style="font-family: Lucida Calligraphy;"> Project for WPI
-            Launch CS 2025 </span></p>
+            Launch CS 2025- made by Hanwen Tang<br>
+          </span></p>
       </div>
     </div>
     <script>
@@ -262,7 +263,6 @@
     seconds++;
     timerEl.textContent = `🔥 Time: ${seconds}s`;
   }, 1000);
-</script>
-    <script src="scripts.js"></script>
+</script> <script src="scripts.js"></script>
   </body>
 </html>

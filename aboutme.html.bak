@@ -15,7 +15,8 @@
       <div id="tswheader">
         <!-- start of header section: insert your logo, etc, here -->
         <p> </p>
-        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 209px; height: 209px;"
+        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 209px; height: 209px;"
+
             id="logo"></p>
         <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
@@ -34,13 +35,16 @@
           <p><strong><span style="font-family: Times New Roman;">Favorite
                 Premier League team Tottenham !!</span></strong></p>
           <p><br>
-            <img src="images/fluteee.jpg" alt="fluteeeeee" style="width: 204px; height: 152px;"
+            <img src="images/fluteee.jpg" alt="fluteeeeee" style="width: 204px; height: 152px;"
+
               id="tkd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="images/spurs.png" alt="Spurs Logo" style="width: 151px; height: 151px;"
+            <img src="images/spurs.png" alt="Spurs Logo" style="width: 151px; height: 151px;"
+
               id="spurs"></p>
-          <p><img src="images/TKD.png" alt="t" style="width: 229px; height: 152px;"
+          <p><img src="images/TKD.png" alt="t" style="width: 229px; height: 152px;"
+
               id="td"> </p>
           <p style="color: #061387;">&nbsp;</p>
           <!-- end of content column: put your content above this line --> </div>
@@ -50,7 +54,7 @@
           <!-- start of side column: insert your navigation menu, etc, here -->
           <p></p>
           <div style="margin-bottom: 20px;"> <label for="themeSelect" style="font-weight: bold;">🎨
-              Theme:</label>
+              Theme:</label> 
             <select id="themeSelect" onchange="changeTheme(this.value)" style="width: 100%; margin-top: 5px;">
               <option value="default">Default</option>
               <option value="redgreen">Red-Green</option>
@@ -73,20 +77,26 @@
   document.getElementById('themeSelect').value = savedTheme;
 </script> <div id="tswcssbuttons">
             <ul>
-              <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
+              <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
+
                     style="background-color: #cf9dd0 !important;">Home</a></span></li>
               <span style="font-family: Rockwell;"> </span>
-              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back"
+              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back"
+
                     style="background-color: #ccffff !important;">About me</a></span></li>
               <span style="font-family: Rockwell;"> </span>
-              <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
+              <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
+
                     style="background-color: #ff6666 !important;">Projects</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
+              <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
+
                     style="background-color: #c8ffd2 !important;">More</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
+              <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
+
                     id="bach" style="background-color: #b98982 !important;">Secret
                     Sauce</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
+              <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
+
                     style="background-color: #b98982 !important;">Wordle</a></span></li>
             </ul>
           </div>
@@ -110,5 +120,6 @@
     timerEl.textContent = `🔥 Time: ${seconds}s`;
   }, 1000);
 </script>
+    <script src="scripts.js"></script>
   </body>
 </html>

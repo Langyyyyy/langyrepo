@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    background: linear-gradient(to bottom right, #2c3e50, #34495e);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#app-container {
+    background-color: rgba(44, 62, 80, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    color: #ecf0f1;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+p.subtitle {
+    text-align: center;
+    color: #bdc3c7;
+    margin-top: -10px;
+}
+
+/* Chatbot Styles */
+#chatbot-section {
+    margin: 20px 0;
+}
+
+#api-key-section {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+}
+
+.api-key-input-group {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+#api-key-input {
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+}
+
+#toggle-api-key {
+    padding: 8px 12px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 16px;
+    border-left: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+#toggle-api-key:hover {
+    background-color: #ccc;
+}
+
+.api-key-input-group:focus-within {
+    border-color: #3498db;
+}
+
+#connect-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#connect-btn:hover {
+    background-color: #2980b9;
+}
+
+#chat-container {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.chat-message.user {
+    background-color: #3498db;
+    align-self: flex-end;
+    text-align: right;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-message.bot {
+    background-color: #7f8c8d;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+#chat-input-container {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-right: 10px;
+    outline: none;
+}
+
+#chat-input:disabled {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#send-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#send-btn:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+#send-btn:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Weather Card Styles (for bot responses) */
+.weather-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.weather-card h4 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+/* Forecast Section Styles */
+#forecast-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#forecast-container h2, #forecast-container h3 {
+    text-align: center;
+    color: #ecf0f1;
+    font-weight: 300;
+}
+
+#forecast-container h3.table-title {
+    margin-top: 30px;
+}
+
+#forecast-chart {
+    max-height: 300px;
+}
+
+#forecast-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#forecast-table th, #forecast-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#forecast-table th {
+    color: #bdc3c7;
+    font-weight: 400;
+}
+
+#forecast-table td {
+    vertical-align: middle;
+}
+
+#forecast-table img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

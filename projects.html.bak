@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Insert web page title here</title>
+    <title>Projects</title>
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="generator" content="thesitewizard.com's Layout Wizard 4.0.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,23 +10,17 @@
     <link rel="stylesheet" type="text/css" href="tswnavbar.css">
   </head>
   <body class="theme-default">
-    <div id="timer">🔥 Time: 0s</div>
+    <div id="timer">⏳ Loading...</div>
     <div id="tswcontainer">
       <div id="tswheader">
-        <!-- start of header section: insert your logo, etc, here -->
-        <p> </p>
         <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 209px; height: 209px;"
 
             id="logo"></p>
-        <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
         <div id="tswcontproper" style="color: #121387; background-color: #baf2a9;">
-          <!-- start of content column: insert your content here -->
-          <h1 id="header"><strong>Projects..</strong></h1>
-          <strong></strong><strong><span style="font-family: Times New Roman;">empty
-              for now<br>
-            </span></strong>
-          <p style="color: #061387;">&nbsp;</p>
+          <h1 id="header"><strong>Projects</strong></h1>
+          <div id="projectGrid" class="project-grid">
+            <!-- cards will be injected here by JS --> </div>
           <!-- end of content column: put your content above this line --> </div>
       </div>
       <div id="tswsidecol">
@@ -57,27 +51,14 @@
   document.getElementById('themeSelect').value = savedTheme;
 </script> <div id="tswcssbuttons">
             <ul>
-              <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
-
-                    style="background-color: #cf9dd0 !important;">Home</a></span></li>
-              <span style="font-family: Rockwell;"> </span>
-              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back"
-
-                    style="background-color: #ccffff !important;">About me</a></span></li>
-              <span style="font-family: Rockwell;"> </span>
-              <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
-
-                    style="background-color: #ff6666 !important;">Projects</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
-
-                    style="background-color: #c8ffd2 !important;">More</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
-
-                    id="bach" style="background-color: #b98982 !important;">Secret
-                    Sauce</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
-
-                    style="background-color: #b98982 !important;">Wordle</a></span></li>
+              <li><a href="index.html" style="background-color: #cf9dd0 !important;">Home</a></li>
+              <li><a href="aboutme.html" style="background-color: #ccffff !important;">About
+                  me</a></li>
+              <li><a href="projects.html" style="background-color: #ff6666 !important;">Projects</a></li>
+              <li><a href="more.html" style="background-color: #c8ffd2 !important;">More</a></li>
+              <li><a href="secretsauce.html" style="background-color: #b98982 !important;">Secret
+                  Sauce</a></li>
+              <li><a href="wordle.html" style="background-color: #b98982 !important;">Wordle</a></li>
             </ul>
           </div>
           <p></p>
@@ -88,18 +69,13 @@
       <div id="tswfooter">
         <!-- start of footer section: insert your copyright notice, etc, here -->
         <p><span style="font-family: Lucida Calligraphy;"> Project for WPI
-            Launch CS 2025 </span></p>
+            Launch CS 2025- made by Hanwen Tang<br>
+          </span></p>
         <!-- end of footer section: insert your copyright notice, etc, above this line -->
       </div>
     </div>
-    <script>
-  let seconds = 0;
-  const timerEl = document.getElementById("timer");
-  setInterval(() => {
-    seconds++;
-    timerEl.textContent = `🔥 Time: ${seconds}s`;
-  }, 1000);
-</script>
+    <!-- The timer is now handled by scripts.js -->
     <script src="scripts.js"></script>
+    <script src="projects.js"></script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Wordle Clone",
+      "description": "A browser-based Wordle game with custom word lists, themes, and stats.",
+      "link": "wordle.html",
+      "image": "images/wordle-thumbnail.png"
+    },
+    {
+      "title": "Word Fold",
+      "description": "Word Connections Game with nice aesthics",
+      "link": "game.html",
+      "image": "images/aboutme-thumbnail.png"
+    }
+    
+  ]
+  
