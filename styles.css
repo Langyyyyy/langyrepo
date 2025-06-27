@@ -31,6 +31,14 @@ img {
   height: auto;
 }
 
+/* Standardize logo size */
+#logo {
+  width: 209px;
+  height: 209px;
+  display: block;
+  margin: 0 auto; /* Center the logo */
+}
+
 /* Inputs and buttons responsive */
 input, select, button, textarea {
   max-width: 100%;
@@ -130,14 +138,17 @@ div#tswcontainer {
 }
 
 /* Header and footer */
-div#tswheader,
-div#tswfooter {
+div#tswheader, div#tswfooter {
   color: #fff;
-  background-color: #001f4d;
-  border-radius: 6px;
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4); /* Reverted to semi-transparent black */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  padding: 15px;
   box-sizing: border-box;
+  text-align: center; /* Center footer text */
 }
+
+div#tswheader { border-bottom: 1px solid rgba(255, 255, 255, 0.1); border-radius: 6px 6px 0 0; }
+div#tswfooter { border-top: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0 0 6px 6px; margin-top: 15px; font-size: 0.9em; }
 
 /* Timer styling */
 #timer {
