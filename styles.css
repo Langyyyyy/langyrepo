@@ -2,7 +2,7 @@
 body {
   font-family: "Arial", "Helvetica", "sans-serif", "Pristina", "Times New Roman";
   font-size: larger;
-  background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%); /* Default: Green gradient */
+  background: linear-gradient(135deg, #232526 0%, #414345 100%); /* Default: Dark charcoal gradient */
   color: #fff;
   margin: 0;
   padding: 0;
@@ -10,9 +10,7 @@ body {
 }
 
 /* Theme gradients */
-.theme-default {
-  background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
-}
+/* The default theme background is now defined directly in the body style above */
 
 .theme-redgreen {
   background: linear-gradient(135deg, #ff5858 0%, #4caf50 100%);
@@ -162,7 +160,7 @@ div#tswfooter {
 }
 
 .project-card {
-  background: rgba(255,255,255,0.8);
+  background: rgba(248, 249, 250, 0.92); /* A nearly-opaque, slightly off-white */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -185,12 +183,13 @@ div#tswfooter {
 
 .project-card .card-content h3 {
   margin: 0 0 8px;
+  color: #1a1a1a; /* Dark color for titles for high contrast */
 }
 
 .project-card .card-content p {
   margin: 0 0 12px;
   font-size: 0.95rem;
-  color: #333;
+  color: #2c2c2c; /* Darker text for readability */
 }
 
 /* Style for the clickable project image */
@@ -209,4 +208,21 @@ div#tswfooter {
   text-decoration: none;
   color: #121387;
   font-weight: bold;
+}
+/* Generic content highlight box */
+.blended-box {
+  background-color: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  color: #fff; /* readable on all backgrounds */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+body.theme-default .blended-box,
+body.theme-redgreen .blended-box,
+body.theme-purpleyellow .blended-box,
+body.theme-blueorange .blended-box {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
