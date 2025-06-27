@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="tswnavbar.css">
   </head>
   <body class="theme-default">
-    <div id="timer">🔥 Time: 0s</div>
+    <div id="timer">Loading countdown...</div>
     <div id="tswcontainer">
       <div id="tswheader">
         <!-- start of header section: insert your logo, etc, here -->
@@ -94,20 +94,11 @@
       </div>
       <div style="clear: both;"></div>
       <div id="tswfooter">
-        <!-- start of footer section: insert your copyright notice, etc, here -->
         <p><span style="font-family: Lucida Calligraphy;"> Project for WPI
             Launch CS 2025 - made by Hanwen Tang<br>
           </span></p>
-        <!-- end of footer section: insert your copyright notice, etc, above this line -->
       </div>
     </div>
-    <script>
-  let seconds = 0;
-  const timerEl = document.getElementById("timer");
-  setInterval(() => {
-    seconds++;
-    timerEl.textContent = `🔥 Time: ${seconds}s`;
-  }, 1000);
-</script> <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>

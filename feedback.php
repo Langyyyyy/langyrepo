@@ -60,9 +60,9 @@
 
 $mailto = 'htygr2010@gmail.com' ;
 $subject = "Website Contact Form" ;
-$formurl = "secretsauce.html" ;
-$thankyouurl = "http://thankyou.html" ;
-$errorurl = "http://oopsie.html" ;
+$formurl = "secretsauce.html" ; // This is correct, points to your contact form
+$thankyouurl = "thankyou.html" ; // Changed to relative path
+$errorurl = "oopsie.html" ;     // Changed to relative path
 $want_tel_field = 0;
 $want_addr_field = 0;
 

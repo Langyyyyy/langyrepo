@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Projects</title>
+    <title>Submission Error</title>
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="generator" content="thesitewizard.com's Layout Wizard 4.0.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,20 +13,18 @@
     <div id="timer">Loading countdown...</div>
     <div id="tswcontainer">
       <div id="tswheader">
-        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" style="width: 209px; height: 209px;"
-
-            id="logo"></p>
+        <p>&nbsp;<img src="images/logo.png" alt="Hanwen's Logo" id="logo"></p>
       </div>
       <div id="tswcontent">
         <div class="blended-box" id="wor">
-          <h1 id="header"><strong>Projects</strong></h1>
-          <div id="projectGrid" class="project-grid">
-            <!-- cards will be injected here by JS --> </div>
-          <!-- end of content column: put your content above this line --> </div>
+          <h1>Oops! Something Went Wrong.</h1>
+          <p>It looks like there was an error with your submission. This can happen if required fields (like Name, Email, or Comments) are left blank or if the email address is not in a valid format.</p>
+          <p>Please use the link below to go back and try again.</p>
+          <p><a href="secretsauce.html" style="font-weight: bold; color: #fff;">&laquo; Go Back to the Contact Form</a></p>
+        </div>
       </div>
       <div id="tswsidecol">
         <div id="tswsideproper">
-          <!-- start of side column: insert your navigation menu, etc, here -->
           <p></p>
           <div style="margin-bottom: 20px;"> <label for="themeSelect" style="font-weight: bold;">🎨
               Theme:</label>
@@ -38,19 +36,18 @@
             </select>
           </div>
           <script>
-  function changeTheme(theme) {
-    document.body.classList.remove(
-      'theme-default', 'theme-redgreen', 'theme-purpleyellow', 'theme-blueorange'
-    );
-    document.body.classList.add(`theme-${theme}`);
-    localStorage.setItem('colorTheme', theme);
-  }
-
-  // On page load, apply saved theme
-  const savedTheme = localStorage.getItem('colorTheme') || 'default';
-  document.body.classList.add(`theme-${savedTheme}`);
-  document.getElementById('themeSelect').value = savedTheme;
-</script> <div id="tswcssbuttons">
+            function changeTheme(theme) {
+              document.body.classList.remove(
+                'theme-default', 'theme-redgreen', 'theme-purpleyellow', 'theme-blueorange'
+              );
+              document.body.classList.add(`theme-${theme}`);
+              localStorage.setItem('colorTheme', theme);
+            }
+            const savedTheme = localStorage.getItem('colorTheme') || 'default';
+            document.body.classList.add(`theme-${savedTheme}`);
+            document.getElementById('themeSelect').value = savedTheme;
+          </script>
+          <div id="tswcssbuttons">
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="aboutme.html">About me</a></li>
@@ -63,7 +60,6 @@
             </ul>
           </div>
           <p></p>
-          <!-- end of side column: put your navigation menu, etc, above this line -->
         </div>
       </div>
       <div style="clear: both;"></div>
@@ -74,6 +70,5 @@
       </div>
     </div>
     <script src="scripts.js"></script>
-    <script src="projects.js"></script>
   </body>
 </html>

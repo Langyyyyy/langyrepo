@@ -1,74 +1,27 @@
-// scripts.js
+// Function to update the countdown timer
+function updateCountdown() {
+    // Xi Jinping's 73rd birthday: June 15, 2026
+    const targetDate = new Date('2026-06-15T00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-// ======= Collapsible Sidebar =======
-window.addEventListener('DOMContentLoaded', () => {
-  const sidebar = document.getElementById('tswsidecol');
-  const toggleBtn = document.getElementById('sidebarToggle');
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  if (sidebar && toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      if (sidebar.style.display === 'none' || sidebar.style.width === '0px') {
-        sidebar.style.display = 'block';
-        sidebar.style.width = '20%';
-      } else {
-        sidebar.style.display = 'none';
-        sidebar.style.width = '0';
-      }
-    });
-  }
-
-  // ======= Custom Tooltip =======
-  const tooltip = document.createElement('div');
-  tooltip.style.position = 'absolute';
-  tooltip.style.background = '#232b57';
-  tooltip.style.color = '#fff';
-  tooltip.style.padding = '6px 10px';
-  tooltip.style.borderRadius = '6px';
-  tooltip.style.fontSize = '0.9rem';
-  tooltip.style.pointerEvents = 'none';
-  tooltip.style.transition = 'opacity 0.2s ease';
-  tooltip.style.opacity = '0';
-  tooltip.style.zIndex = '10000';
-  document.body.appendChild(tooltip);
-
-  document.querySelectorAll('[data-tooltip]').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      tooltip.textContent = el.getAttribute('data-tooltip');
-      tooltip.style.opacity = '1';
-    });
-    el.addEventListener('mousemove', (e) => {
-      tooltip.style.left = e.pageX + 15 + 'px';
-      tooltip.style.top = e.pageY + 15 + 'px';
-    });
-    el.addEventListener('mouseleave', () => {
-      tooltip.style.opacity = '0';
-    });
-  });
-
-  // ======= Countdown Timer =======
-  const countdownEl = document.getElementById('timer');
-  const targetDate = new Date('2025-06-30T23:59:59');
-
-  function updateCountdown() {
-    if (!countdownEl) return;
-
-    const now = new Date();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      countdownEl.textContent = "🎉 The date has arrived!";
-      clearInterval(countdownInterval);
-      return;
+    const timerEl = document.getElementById("timer");
+    if (timerEl) {
+        if (distance < 0) {
+            timerEl.textContent = "🎉 Happy Birthday, Xi Jinping!";
+        } else {
+            timerEl.textContent = `🗓️ Countdown to Xi Jinping's 73rd Birthday: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
     }
+}
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
 
-    countdownEl.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until July 2025`;
-  }
-
-  updateCountdown();
-  const countdownInterval = setInterval(updateCountdown, 1000);
-});
+// Initial call to display the countdown immediately when the DOM is ready
+document.addEventListener('DOMContentLoaded', updateCountdown);
