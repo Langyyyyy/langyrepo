@@ -42,6 +42,10 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
+    /* Hide the API key input section from view */
+    #api-key-section {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -88,5 +92,22 @@
   <script src="./WeatherChatbot.js"></script>
   <script src="./display.js"></script>
   <script src="./main.js"></script>
+  <script>
+    /*
+      IMPORTANT SECURITY NOTE:
+      Your API key is included below. This is NOT secure for a public website,
+      as anyone can find it by viewing the page source. For a personal project,
+      you can mitigate the risk by restricting the key in your Google Cloud dashboard
+      to only work from your website's domain.
+    */
+    document.addEventListener('DOMContentLoaded', () => {
+      const apiKey = 'AIzaSyCpNvlF8Cil519NUIXaGD7Qq4mpjk0aoOI';
+      const apiKeyInput = document.getElementById('api-key-input');
+      const connectBtn = document.getElementById('connect-btn');
+
+      apiKeyInput.value = apiKey; // Set the key in the hidden input
+      connectBtn.click(); // Programmatically click "Connect"
+    });
+  </script>
 </body>
 </html>
