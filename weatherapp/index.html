@@ -21,8 +21,31 @@
       },
     };
   </script>
+  <style>
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: #5c6bc0; /* A nice indigo that fits the app theme */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: all 0.2s ease-in-out;
+      z-index: 1000;
+    }
+    .home-button:hover {
+      background-color: #3949ab;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
+  <a href="../index.html" class="home-button">🏠 Home</a>
   <main id="app-container">
     <h1>🤖 Smart Weather Assistant</h1>
     <p class="subtitle">Your intelligent assistant for any weather query. Ask "What's the forecast for Paris?" or "humidity in Tokyo".</p>

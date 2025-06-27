@@ -7,6 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="game.css">
   <style>
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      /* A nice blue that fits a game-like theme */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: sans-serif;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease-in-out;
+      z-index: 1000;
+    }
+
+    .home-button:hover {
+      background-color: #357abd;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
     body {
       display: flex;
       flex-direction: column;
@@ -67,6 +90,8 @@
 </head>
 
 <body>
+
+  <a href="../index.html" class="home-button">🏠 Home</a>
 
   <h1 class="no-margin">Word Fold</h1>
 

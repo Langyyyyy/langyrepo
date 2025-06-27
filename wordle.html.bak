@@ -96,13 +96,15 @@
             id="logo"></p>
       </div>
       <div id="tswcontent">
-        <div style="color: #121387; background-color: #baf2a9;" id="wor">
+        <div class="blended-box" id="wor">
+
           <h1 id="header"><strong>Wordle</strong></h1>
           <p>Word list courtesy of <a href="https://gist.github.com/kcwhite/bb598f1b3017b5477cb818c9b086a5d9"
 
               target="_blank" rel="noopener noreferrer">kcwhite’s public word
               list</a> — thank you!</p>
-          <div id="wordleContainer">
+              <div id="wordleContainer" class="blended-box">
+
             <div class="board" id="board"></div>
             <input id="guessInput" maxlength="5" placeholder="Type 5-letter word"
 
@@ -225,25 +227,14 @@
   document.getElementById('themeSelect').value = savedTheme;
 </script> <div id="tswcssbuttons">
             <ul>
-              <li><span style="font-family: Rockwell;"><a href="index.html" id="backdds"
-
-                    style="background-color: #cf9dd0 !important;">Home</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="aboutme.html" id="back"
-
-                    style="background-color: #ccffff !important;">About me</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="projects.html" id="bach"
-
-                    style="background-color: #ff6666 !important;">Projects</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="more.html" id="bach"
-
-                    style="background-color: #c8ffd2 !important;">More</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="secretsauce.html"
-
-                    id="bach" style="background-color: #b98982 !important;">Secret
-                    Sauce</a></span></li>
-              <li><span style="font-family: Rockwell;"><a href="wordle.html" id="bach"
-
-                    style="background-color: #b98982 !important;">Wordle</a></span></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutme.html">About me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="more.html">More</a></li>
+              <li><a href="secretsauce.html">Secret Sauce</a></li>
+              <li><a href="wordle.html">Wordle</a></li>
+              <li><a href="wordfold/game.html">Word Fold</a></li>
+              <li><a href="weatherapp/index.html">Weather App</a></li>
             </ul>
           </div>
           <p></p>

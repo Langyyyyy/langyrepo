@@ -59,8 +59,8 @@
 // ------------- CONFIGURABLE SECTION ------------------------
 
 $mailto = 'htygr2010@gmail.com' ;
-$subject = "Feedback Form" ;
-$formurl = "http://secretsauce.html" ;
+$subject = "Website Contact Form" ;
+$formurl = "secretsauce.html" ;
 $thankyouurl = "http://thankyou.html" ;
 $errorurl = "http://oopsie.html" ;
 $want_tel_field = 0;
