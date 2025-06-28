@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     counterElement.id = 'visitor-counter';
     document.body.appendChild(counterElement);
 
-    // Style the counter for a nice, clean look in the top-left corner
+    // Style the counter for a nice, clean look in the bottom-right corner
     Object.assign(counterElement.style, {
         position: 'fixed',
-        top: '10px',
-        left: '10px',
+        bottom: '10px',
+        right: '10px',
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
         color: 'white',
         padding: '5px 15px',
